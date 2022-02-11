@@ -1,6 +1,6 @@
 # Учебный проект Яндекс.Практикум
 ### [Макет в Figma от Яндекса](https://www.figma.com/file/24EUnEHGEDNLdOcxg7ULwV/Chat?node-id=0%3A1)
-[Веб-хостинг в Netlify]()
+[Веб-хостинг в Netlify](https://sad-galileo-d2e737.netlify.app/)
 ## Использованные технологии
 - Parcel для сборки проекта
 - Шаблонизатор Pug
