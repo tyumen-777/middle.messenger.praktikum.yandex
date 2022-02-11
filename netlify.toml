@@ -7,10 +7,9 @@
 
 [build]
   publish = "dist"
-  command = "CI= npm run build"
 
 [[redirects]]
-from = "/*"
+  from = "/*"
   to = "/"
   status = 200
   force = false
