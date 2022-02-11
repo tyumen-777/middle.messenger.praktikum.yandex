@@ -8,4 +8,9 @@
 [build]
   publish = "dist"
   command = "CI= npm run build"
-  port = 3000
+
+[[redirects]]
+from = "/*"
+  to = "/"
+  status = 200
+  force = false
