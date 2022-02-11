@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "npm run build && nodemon app.js",
-    "build" : "parcel build src/**/*.pug",
+    "build" : "parcel build src/index.pug",
     "dev": "parcel src/**/*.pug --open --port 3000"
   },
   "repository": {
