@@ -1,0 +1,14 @@
+extends ../layouts/head
+
+include ../components/input/input
+
+block content
+    .login
+        h1.login__header Вход
+        form.login__form(action="")
+            div.login__form__inputs
+                +input('Логин', 'login', 'text').login__input
+                +input('Пароль', 'password', 'password').login__input
+            div.login__form__buttons
+                input(type='submit', value='Войти').login__form__button
+                a(href='./signin.pug').login__form__registration Зарегистрироваться

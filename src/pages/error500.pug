@@ -1,0 +1,5 @@
+extends ../layouts/head
+include ../components/errors/errors
+
+block content
+    +errors('500', 'Мы уже фиксим', 'Назад к чатам', '/')

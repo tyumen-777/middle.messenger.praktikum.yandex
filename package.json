@@ -1,0 +1,31 @@
+{
+  "name": "middle.messenger.praktikum.yandex",
+  "version": "1.0.0",
+  "description": "---",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "start": "npm run build && nodemon app.js",
+    "build" : "parcel build src/**/*.pug",
+    "dev": "parcel src/**/*.pug --open --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyumen-777/middle.messenger.praktikum.yandex.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyumen-777/middle.messenger.praktikum.yandex/issues"
+  },
+  "homepage": "https://github.com/tyumen-777/middle.messenger.praktikum.yandex#readme",
+  "dependencies": {
+    "@parcel/transformer-pug": "^2.3.0",
+    "@parcel/transformer-sass": "^2.3.0",
+    "express": "^4.17.2",
+    "parcel": "^2.3.0",
+    "pug": "^3.0.2",
+    "sass": "^1.49.7"
+  }
+}

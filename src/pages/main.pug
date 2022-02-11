@@ -1,0 +1,13 @@
+extends ../layouts/head
+include ../components/chatCard/chatCard
+
+block content
+    nav.sidebar
+        div.sidebar__profile_block
+            a(href="./profile.pug").sidebar__profile_link Профиль
+        div.sidebar__searchbox_wrapper
+            input(placeholder="Поиск").searchbox.sidebar__searchbox
+        div.chat__list
+            +chatCard('Жена', 'Сегодня дома!')
+            +chatCard('Саня', 'Го тусить?')
+    main.main__block Выберите чат чтобы отправить сообщение
