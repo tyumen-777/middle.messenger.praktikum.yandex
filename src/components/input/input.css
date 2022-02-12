@@ -1,0 +1,11 @@
+.input {
+  border: none;
+  border-bottom: 1px solid #3369F3;
+  margin-bottom: 30px;
+  padding: 7px 0;
+}
+.input:focus-visible {
+  outline: none;
+}
+
+/*# sourceMappingURL=input.css.map */
