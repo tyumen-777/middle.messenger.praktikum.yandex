@@ -1,11 +1,17 @@
-.submit {
-  background-color: var(--primary);
-  color: var(--white);
-  border-radius: 8px;
-  height: 37px;
-  border: none;
-  font-size: 13px;
-  cursor: pointer;
-}
+/* Error: Undefined variable.
+ *   ,
+ * 2 |   background-color: $primary_color
+ *   |                     ^^^^^^^^^^^^^^
+ *   '
+ *   submit.sass 2:21  root stylesheet */
 
-/*# sourceMappingURL=submit.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 2 \2502    background-color: $primary_color\a   \2502                      ^^^^^^^^^^^^^^\a   \2575 \a   submit.sass 2:21  root stylesheet";
+}
