@@ -1,4 +1,5 @@
 import Chats from '~src/pages/chats/chats';
+import ProfileEditing from '~src/pages/profile-editing/profile-editing';
 import render from './utils/render-dom';
 import Login from '~src/pages/login/login';
 import Notfound from '~src/pages/notfound/notfound';
@@ -11,6 +12,7 @@ const loginPage = new Login();
 const signinPage = new Signin();
 const notFoundPage = new Notfound();
 const profilePage = new Profile();
+const profileEditingPage = new ProfileEditing();
 const unavailablePage = new Unavailable();
 
 switch (document.location.pathname) {
@@ -26,6 +28,9 @@ switch (document.location.pathname) {
     break;
   case '/profile':
     render('#root', profilePage);
+    break;
+  case '/profile-editing':
+    render('#root', profileEditingPage);
     break;
   case '/unavailable':
     render('#root', unavailablePage);

@@ -28,11 +28,11 @@ main.profile__container
     div.profile__block_buttons
       ul.profile__block_buttons-list
         li.profile__block__buttons-item
-          a.profile__block_edit_button Изменить данные
+          a(href='/profile-editing').profile__block_edit_button Изменить данные
         li.profile__block__buttons-item
-          a.profile__block_edit_button Изменить пароль
+          a(href='/profile-editing').profile__block_edit_button Изменить пароль
         li.profile__block__buttons-item
-          a.profile__block_exit_button Выйти
+          a(href='/login').profile__block_exit_button Выйти
 `;
 
 export default profileTemplate;
