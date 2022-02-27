@@ -22,6 +22,10 @@
     "url": "https://github.com/tyumen-777/middle.messenger.praktikum.yandex/issues"
   },
   "homepage": "https://github.com/tyumen-777/middle.messenger.praktikum.yandex#readme",
+  "browserslist": [
+    "last 1 version",
+    "> 1%"
+  ],
   "dependencies": {
     "@parcel/transformer-pug": "2.3.0",
     "@parcel/transformer-sass": "2.3.0",
