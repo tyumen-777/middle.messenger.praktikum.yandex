@@ -10,7 +10,8 @@
     "build": "parcel build src/index.pug",
     "dev": "parcel src/index.pug --open --port 3000",
     "stylelint": "stylelint **/*.css",
-    "eslint": "eslint **/*.ts"
+    "eslint": "eslint **/*.ts",
+    "tsc": "tsc"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "@parcel/transformer-pug": "2.3.0",
     "@parcel/transformer-sass": "2.3.0",
     "@types/pug": "^2.0.6",
+    "buffer": "^6.0.3",
     "express": "4.17.2",
     "parcel": "2.3.0",
     "postcss-sass": "^0.5.0",
