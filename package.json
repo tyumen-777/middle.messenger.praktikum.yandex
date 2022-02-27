@@ -26,11 +26,14 @@
     "last 1 version",
     "> 1%"
   ],
-  "alias": { "process": false },
+  "alias": {
+    "process": false
+  },
   "dependencies": {
     "@parcel/transformer-pug": "2.3.0",
     "@parcel/transformer-sass": "2.3.0",
     "@types/pug": "^2.0.6",
+    "buffer": "^6.0.3",
     "express": "4.17.2",
     "parcel": "2.3.0",
     "postcss-sass": "^0.5.0",
