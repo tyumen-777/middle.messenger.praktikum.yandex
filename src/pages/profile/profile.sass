@@ -1,0 +1,108 @@
+.back
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 100%
+  width: 64px
+  background-color: $nav-background-color
+  border-right: 1px solid #eaeaea
+  cursor: pointer
+
+  &__button
+    position: relative
+    width: 28px
+    height: 28px
+    border-radius: 50%
+    background-color: #3369f3
+
+  &__button:before
+    content: ''
+    position: absolute
+    left: 9px
+    top: 0
+    bottom: 0
+    margin: auto 0
+    width: 6px
+    height: 6px
+    border-top: 1px solid white
+    border-left: 1px solid white
+    transform: rotate(-45deg)
+
+  &__button:after
+    content: ''
+    position: absolute
+    left: 9px
+    top: 0
+    bottom: 0
+    margin: auto 0
+    width: 11px
+    height: 1px
+    background-color: white
+
+.profile__body__container
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100%
+
+
+.profile__container
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-grow: 1
+
+.profile__block
+  width: 510px
+  padding: 60px 0
+
+  &__avatar
+    width: 130px
+    height: 130px
+    border-radius: 50%
+    background-color: #efefef
+    margin: 0 auto 20px
+
+  &__name
+    font-weight: 600
+    font-size: 16px
+    line-height: 16px
+    margin-bottom: 60px
+    text-align: center
+
+  &__info
+    margin-bottom: 40px
+
+  &__info-item
+    display: flex
+    justify-content: space-between
+    width: 100%
+    padding: 10px 0
+    font-size: 13px
+    font-weight: 500
+
+  &__info-item:not(:last-child)
+    border-bottom: 1px solid #eaeaea
+
+  &__info-label
+    color: $text-color-01
+
+  &__info-value
+    color: #999999
+
+  &__buttons-item
+    width: 100%
+    padding: 10px 0
+    font-size: 13px
+    font-weight: 500
+
+  &__buttons-item:not(:last-child)
+    border-bottom: 1px solid #eaeaea
+
+  &_edit_button
+    cursor: pointer
+    color: #3369f3
+
+  &_exit_button
+    cursor: pointer
+    color: #ff0000

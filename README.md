@@ -6,10 +6,13 @@
 - Шаблонизатор Pug
 - ExpressJS для раздачи статики
 - Препроцессор SASS
+- Typescript
+- ESLint
+- Stylelint
 ## Команды для запуска
   - `npm install`- установить пакеты для запуска приложения
   - `npm run dev` - локальный запуск проекта
   - `npm run build` - сборка проекта
   - `npm start` - запуск проекта на 3000 порту.
 
-[Ссылка на Pull request (sprint_1)]()
+[Ссылка на Pull request (sprint_1)](https://github.com/tyumen-777/middle.messenger.praktikum.yandex/pull/1)
