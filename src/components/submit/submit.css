@@ -1,0 +1,11 @@
+.submit {
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 8px;
+  height: 37px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=submit.css.map */

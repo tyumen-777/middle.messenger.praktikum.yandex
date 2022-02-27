@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~*": ["./*"]
+    },
+    "outDir": "dist",
+    "target": "es2016",
+    "declaration": false,
+    "module": "commonjs",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true
+  },
+  "include": ["./src/**/*"]
+}

@@ -1,10 +1,14 @@
-extends ./layouts/head
-
-block content
-    .main
-        a(href="./pages/login.pug") Login
-        a(href="./pages/signin.pug") Signin
-        a(href="./pages/error500.pug") 500 Error
-        a(href="./pages/error404.pug") 404 Error
-        a(href="./pages/main.pug") Main
-        a(href="./pages/profile.pug") Profile
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title WhazUp
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect'  href='https://fonts.gstatic.com')
+    link(rel='stylesheet'  href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet', type='text/css')
+    link(rel='stylesheet' href='~src/styles/index.sass')
+  body.body
+    div#root
+    script(src='index.ts', type='module')
