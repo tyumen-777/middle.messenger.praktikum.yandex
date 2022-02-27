@@ -26,9 +26,6 @@
     "last 1 version",
     "> 1%"
   ],
-  "alias": {
-    "process": false
-  },
   "dependencies": {
     "@parcel/transformer-pug": "2.3.0",
     "@parcel/transformer-sass": "2.3.0",
