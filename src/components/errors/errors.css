@@ -6,20 +6,20 @@
 .errors__title {
   font-size: 40px;
   font-weight: 500;
-  color: #1E1E1E;
+  color: #1e1e1e;
   margin-bottom: 20px;
 }
 .errors__subtitle {
   font-size: 20px;
   font-weight: 500;
-  color: #1E1E1E;
+  color: #1e1e1e;
   margin-bottom: 70px;
 }
 .errors__link {
   font-size: 11px;
   font-weight: 500;
   cursor: pointer;
-  color: #3369F3;
+  color: #3369f3;
 }
 
 /*# sourceMappingURL=errors.css.map */

@@ -1,12 +1,19 @@
-@import "variables"
-@import "./src/styles/login"
-@import "./src/styles/signin"
-@import "./src/styles/main"
-@import "./src/styles/profile"
+@import './src/styles/_variables'
+@import "./src/pages/login/login"
+@import "./src/pages/signin/signin"
+@import "./src/pages/chats/chats"
+@import "./src/pages/profile/profile"
+@import "./src/pages/profile-editing/profile-editing"
 @import "./src/components/input/input"
 @import "./src/components/errors/errors"
-@import "./src/components/chatCard/chatCard"
-
+@import "./src/components/valid-input/valid-input"
+@import "../pages/chats/components/ChatCard/chatCard"
+@import "./src/pages/chats/components/ChatList/chatlist"
+@import "./src/pages/chats/components/ChatSendButton/chatSendButton"
+@import "./src/pages/chats/components/ChatWindow/chatWindow"
+@import "./src/components/submit/submit"
+@import "./src/pages/unavailable/unavailable"
+@import "./src/pages/notfound/notfound"
 
 html
   box-sizing: border-box
@@ -16,7 +23,6 @@ body
   margin: 0
   padding: 0
   height: 100vh
-  display: flex
   justify-content: center
   align-items: center
 
@@ -36,3 +42,6 @@ ul
   margin-block-end: 0
   padding-inline-start: 0
   list-style: none
+
+#root
+  height: 100%

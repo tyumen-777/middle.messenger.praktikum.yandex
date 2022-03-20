@@ -1,0 +1,37 @@
+.chat__send-button {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  background-color: #3369f3;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.chat__send-button::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  width: 10px;
+  height: 2px;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.chat__send-button::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+  right: 9px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+/*# sourceMappingURL=chatSendButton.css.map */
