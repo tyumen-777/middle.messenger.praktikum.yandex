@@ -9,7 +9,7 @@
   background-color: $light-grey;
   height: 100vh;
   border-right: 1px solid $border-grey;
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -37,7 +37,6 @@
   margin-bottom: 60px;
 }
 
-
 .profile__info_wrapper {
   display: flex;
   flex-direction: column;
@@ -58,14 +57,12 @@
 
 .profile__info_title {
   font-size: 13px;
-
 }
 
 .profile__info_text {
   font-size: 13px;
   color: $grey;
 }
-
 
 .profile__edit_wrapper {
   display: flex;
@@ -91,7 +88,6 @@
 
 .profile__edit_text {
   color: $blue;
-
 }
 
 .profile__edit_exit {

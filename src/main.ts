@@ -2,20 +2,22 @@ import Handlebars from 'handlebars';
 import './styles/styles.scss';
 import * as Pages from './pages';
 import * as Components from './components';
-import { ArrowIcon, EmptyAvatar } from "./assets/icons";
-
+import { ArrowIcon, EmptyAvatar } from './assets/icons';
 
 const pages: Record<string, any[]> = {
   login: [Pages.LoginPage, {}],
   signup: [Pages.SignupPage, {}],
   chats: [Pages.ChatsPage],
-  profile: [Pages.ProfilePage, {
-    arrowIcon: ArrowIcon,
-    size: 'large',
-    emptyImage: EmptyAvatar
-  }],
-  '404': [Pages.ErrorPage, {error: '404', errorMessage: 'Не туда попали'}],
-  '500': [Pages.ErrorPage, {error: '500', errorMessage: 'Мы уже фиксим'}],
+  profile: [
+    Pages.ProfilePage,
+    {
+      arrowIcon: ArrowIcon,
+      size: 'large',
+      emptyImage: EmptyAvatar,
+    },
+  ],
+  '404': [Pages.ErrorPage, { error: '404', errorMessage: 'Не туда попали' }],
+  '500': [Pages.ErrorPage, { error: '500', errorMessage: 'Мы уже фиксим' }],
 };
 
 Object.entries(Components).forEach(([name, component]) =>

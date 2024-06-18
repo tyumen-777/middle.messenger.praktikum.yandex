@@ -1,7 +1,11 @@
-<div class="avatar avatar__size-{{size}}">
+<div class="avatar avatar__size-{{ size }}">
   {{#if link}}
-    <img src="{{link}}" alt="user avatar">
+  <img src="{{ link }}" alt="user avatar" />
   {{else}}
-    <img src="{{emptyImage}}" alt="empty user avatar" class="avatar__empty avatar__empty-{{size}}">
+  <img
+    src="{{ emptyImage }}"
+    alt="empty user avatar"
+    class="avatar__empty avatar__empty-{{ size }}"
+  />
   {{/if}}
 </div>

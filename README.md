@@ -1,6 +1,7 @@
 # Веб мессенджер на Vanilla JS + Handlebars
 
 ---
+
 ## Технологии
 
 - #### Typescript
