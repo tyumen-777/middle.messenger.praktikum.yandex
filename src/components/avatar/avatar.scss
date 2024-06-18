@@ -1,0 +1,33 @@
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: $medium-gray;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    background-color: #000000;
+    cursor: pointer;
+  }
+}
+
+.avatar__size-large {
+  width: 130px;
+  height: 130px;
+}
+
+.avatar__size-small {
+  width: 47px;
+  height: 47px;
+}
+
+.avatar__empty {
+  object-fit: contain;
+  width: 40px;
+}
+
+.avatar__empty-small {
+  object-fit: contain;
+  width: 20px;
+}

@@ -1,0 +1,49 @@
+{{#> BaseLayout}}
+  <div class="profile">
+    <aside class="profile__side_menu">
+      {{>ButtonIcon page='chats' src=arrowIcon alt="return"}}
+    </aside>
+    <div class="profile__wrapper">
+      {{>Avatar}}
+      <h1 class="profile__title">Артемий</h1>
+      <div class="profile__info_wrapper">
+        <div class="profile__info_row">
+          <h2 class="profile__info_title">Почта</h2>
+          <h2 class="profile__info_text">pochta@yandex.ru</h2>
+        </div>
+        {{>Divider}}
+        <div class="profile__info_row">
+          <h2 class="profile__info_title">Логин</h2>
+          <h2 class="profile__info_text">coler95</h2>
+        </div>
+        {{>Divider}}
+        <div class="profile__info_row">
+          <h2 class="profile__info_title">Имя</h2>
+          <h2 class="profile__info_text">Artemii</h2>
+        </div>
+        {{>Divider}}
+        <div class="profile__info_row">
+          <h2 class="profile__info_title">Фамилия</h2>
+          <h2 class="profile__info_text">Pudovkin</h2>
+        </div>
+        {{>Divider}}
+        <div class="profile__info_row">
+          <h2 class="profile__info_title">Имя в чате</h2>
+          <h2 class="profile__info_text">Artemii</h2>
+        </div>
+        {{>Divider}}
+        <div class="profile__info_row">
+          <h2 class="profile__info_title">Телефон</h2>
+          <h2 class="profile__info_text">89222222222</h2>
+        </div>
+      </div>
+      <div class="profile__edit_wrapper">
+        <h2 class="profile__edit_text">Изменить данные</h2>
+        {{>Divider}}
+        <h2 class="profile__edit_text">Изменить пароль</h2>
+        {{>Divider}}
+        {{>Button page='login' label='Выйти' type='link'}}
+      </div>
+    </div>
+  </div>
+{{/BaseLayout}}

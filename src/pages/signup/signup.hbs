@@ -1,0 +1,20 @@
+{{#> BaseLayout}}
+  <div class="signup">
+    <div>
+    <h1 class="signup__title">Регистрация</h1>
+      {{#>Form}}
+        {{>Field label="Почта" name="email" type="email"}}
+        {{>Field label="Логин" name="login"}}
+        {{>Field label="Имя" name="first_name"}}
+        {{>Field label="Фамилия" name="second_name"}}
+        {{>Field label="Телефон" name="phone"}}
+        {{>Field label="Пароль" name="password" type="password"}}
+        {{>Field label="Пароль (ещё раз)" name="passwordagain" type="password"}}
+      {{/Form}}
+    </div>
+    <div>
+      {{>Button label='Зарегистрироваться'}}
+      {{>Button label='Войти' type='link' page='login'}}
+    </div>
+  </div>
+{{/BaseLayout}}

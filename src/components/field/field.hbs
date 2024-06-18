@@ -1,0 +1,16 @@
+<div class="field">
+  <label for="{{ name }}" class="field__label">{{ label }}</label>
+  <input
+    class="field__input"
+    type="{{ type }}"
+    name="{{ name }}"
+    id="{{ name }}"
+    value="{{ value }}"
+    placeholder="{{ name }}"
+  />
+  {{#if error}}
+  <span>{{ error }}</span>
+  {{else}}
+  <span>{{ help }}</span>
+  {{/if}}
+</div>

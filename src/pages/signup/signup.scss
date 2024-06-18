@@ -1,0 +1,19 @@
+.signup {
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.14);
+  padding: 30px;
+  border-radius: 12px;
+  width: 340px;
+  height: 615px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.signup__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
