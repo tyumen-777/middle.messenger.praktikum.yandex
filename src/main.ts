@@ -16,6 +16,14 @@ const pages: Record<string, any[]> = {
       emptyImage: EmptyAvatar,
     },
   ],
+  'profile-edit': [
+    Pages.ProfileEdit,
+    {
+      arrowIcon: ArrowIcon,
+      size: 'large',
+      emptyImage: EmptyAvatar,
+    },
+  ],
   '404': [Pages.ErrorPage, { error: '404', errorMessage: 'Не туда попали' }],
   '500': [Pages.ErrorPage, { error: '500', errorMessage: 'Мы уже фиксим' }],
 };
@@ -33,7 +41,7 @@ const navigate = (page: keyof typeof pages) => {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => navigate('profile'));
+document.addEventListener('DOMContentLoaded', () => navigate('profile-edit'));
 
 document.addEventListener('click', (event) => {
   const page = event.target as HTMLInputElement;

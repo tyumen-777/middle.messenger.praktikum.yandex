@@ -5,3 +5,5 @@ export * from './button';
 export * from './button-icon';
 export * from './avatar';
 export * from './divider';
+export * from './profile-form';
+export * from './field-inline';

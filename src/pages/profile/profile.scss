@@ -41,6 +41,10 @@
   display: flex;
   flex-direction: column;
   width: 510px;
+
+  form {
+    gap: 10px;
+  }
 }
 
 .profile__info_row {
@@ -79,10 +83,11 @@
     color: $red;
   }
 
-  > h2 {
+  > a {
     font-weight: 500;
     font-size: 13px;
     cursor: pointer;
+    width: fit-content;
   }
 }
 
@@ -92,4 +97,10 @@
 
 .profile__edit_exit {
   color: $red;
+}
+
+.profile__edit_button {
+  max-width: 280px;
+  width: 100%;
+  margin-top: 60px;
 }
