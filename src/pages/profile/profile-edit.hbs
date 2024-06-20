@@ -1,16 +1,15 @@
 {{#> BaseLayout}}
-  <div class="profile">
-    <aside class="profile__side_menu">
-      {{>ButtonIcon page='chats' src=arrowIcon alt="return"}}
-    </aside>
-    <div class="profile__wrapper">
-      {{>Avatar}}
-      <h1 class="profile__title">Артемий</h1>
+<div class="profile">
+  <aside class="profile__side_menu">
+    {{>ButtonIcon page='chats' src=arrowIcon alt="return"}}
+  </aside>
+  <div class="profile__wrapper">
+    {{>Avatar}}
+    <h1 class="profile__title">Артемий</h1>
     {{>ProfileForm}}
-      <div class="profile__edit_button">
-
+    <div class="profile__edit_button">
       {{>Button page='profile' label='Сохранить'}}
-      </div>
     </div>
   </div>
+</div>
 {{/BaseLayout}}
