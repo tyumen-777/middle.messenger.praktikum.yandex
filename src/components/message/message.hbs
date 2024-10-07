@@ -1,9 +1,9 @@
-<div class="message message__{{type}}">
+<div class="message message__{{ type }}">
   {{#if text}}
-    <span class="message__text">{{text}}</span>
+  <span class="message__text">{{ text }}</span>
   {{/if}}
   {{#if image}}
-    <img class="message__image" src={{image}} alt="image">
+  <img class="message__image" src="{{ image }}" alt="image" />
   {{/if}}
-  <time class="message__{{type}}_time message__time">{{time}}</time>
+  <time class="message__{{ type }}_time message__time">{{ time }}</time>
 </div>
