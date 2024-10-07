@@ -1,0 +1,10 @@
+.field__block {
+  display: flex;
+  flex-direction: column;
+}
+
+.field__block_error {
+  color: #FF2F2F;
+  font-size: 8px;
+  margin-top: 7px;
+}

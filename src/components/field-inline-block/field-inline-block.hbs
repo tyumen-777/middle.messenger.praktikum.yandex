@@ -1,0 +1,9 @@
+<div class="field__inline_block">
+  <label for="{{ name }}" class="field__inline_block_label">{{ label }}</label>
+  <div class="field__inline_block_input">
+    {{{FieldInline}}}
+    {{#if error}}
+      <span class="field__inline_block_error">{{ error }}</span>
+    {{/if}}
+  </div>
+</div>

@@ -1,1 +1,1 @@
-export { default as FieldInline } from './field-inline.hbs?raw';
+export { default as FieldInline } from './field-inline.ts';

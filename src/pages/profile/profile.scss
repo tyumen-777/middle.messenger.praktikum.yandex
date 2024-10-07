@@ -41,6 +41,7 @@
   display: flex;
   flex-direction: column;
   width: 510px;
+  align-items: center;
 
   form {
     gap: 10px;
@@ -51,9 +52,12 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  width: 100%;
+  
   &:not(:first-child) {
     margin-top: 10px;
   }
+
   > h2 {
     font-weight: 500;
   }
@@ -99,7 +103,7 @@
   color: $red;
 }
 
-.profile__edit_button {
+.profile__info_submit_button {
   max-width: 280px;
   width: 100%;
   margin-top: 60px;
