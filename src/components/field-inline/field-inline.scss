@@ -1,0 +1,17 @@
+.field__inline {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.field__inline_label {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.field__inline_input {
+  font-size: 13px;
+  color: $grey;
+  text-align: end;
+  font-weight: 500;
+  font-family: Inter, sans-serif;
+}

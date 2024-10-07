@@ -1,0 +1,35 @@
+.field {
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    border-bottom: 1px solid;
+    border-bottom-color: $blue;
+    margin-top: 8px;
+  }
+
+  &__input::placeholder {
+    color: #ffffff00;
+  }
+
+  &__label {
+    font-size: 9px;
+    line-height: 9px;
+    color: $grey;
+  }
+}
+
+.field__label:has(+ .field__input:not(:focus):placeholder-shown) {
+  transform: translateY(15px);
+  font-size: 13px;
+  transition:
+    font-size 0.2s,
+    transform 0.2s;
+}
+
+.field__label:has(+ .field__input:focus) {
+  transform: translateY(0px);
+  transition:
+    font-size 0.2s,
+    transform 0.2s;
+}
