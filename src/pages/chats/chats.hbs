@@ -1,1 +1,43 @@
-<div class="chats">Chat page</div>
+<div class="chats">
+  <aside class="chats__wrapper">
+    <div class="chats__search_wrapper">
+      {{{ProfileButton}}}
+      {{{SearchField }}}
+    </div>
+    {{>Divider}}
+    <ul class="chats__list">
+      <li class="chat_wrapper">
+        {{{UserAvatar}}}
+        <div class="chat__info">
+          <p class="chat__name">Sam Fishman</p>
+          <span class="chat__date">Fri</span>
+          <p class="chat__message">message</p>
+          <div class="chat__counter">
+            <span>1</span>
+          </div>
+        </div>
+      </li>
+      {{>Divider}}
+    </ul>
+  </aside>
+  <div class="chat">
+    <div class="chat__header">
+      <div class="chat__header_info">
+
+        {{{ProfileAvatar}}}
+        <h1>USER</h1>
+      </div>
+      {{{MenuButton}}}
+    </div>
+    {{>Divider}}
+    <div class="chats__messages">
+      {{{Messages}}}
+    </div>
+    {{>Divider}}
+    <div class="chats__message_wrapper">
+      {{{AttachButton}}}
+      {{{MessageField}}}
+      {{{SubmitIcon}}}
+    </div>
+  </div>
+</div>

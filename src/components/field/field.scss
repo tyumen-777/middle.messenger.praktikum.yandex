@@ -9,7 +9,7 @@
   }
 
   &__input::placeholder {
-    color: #ffffff00;
+    color: #fff0;
   }
 
   &__label {
@@ -19,17 +19,16 @@
   }
 }
 
+.field__label:has(+ .field__input:focus) {
+  transform: translateY(0);
+  transition: font-size 0.2s,
+  transform 0.2s;
+}
+
 .field__label:has(+ .field__input:not(:focus):placeholder-shown) {
   transform: translateY(15px);
   font-size: 13px;
-  transition:
-    font-size 0.2s,
-    transform 0.2s;
+  transition: font-size 0.2s,
+  transform 0.2s;
 }
 
-.field__label:has(+ .field__input:focus) {
-  transform: translateY(0px);
-  transition:
-    font-size 0.2s,
-    transform 0.2s;
-}

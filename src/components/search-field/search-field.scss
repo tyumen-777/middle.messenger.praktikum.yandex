@@ -1,0 +1,17 @@
+.search__field {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  background-color: $medium-gray;
+  border-radius: 5px;
+  max-width: 290px;
+  height: 32px;
+}
+
+.search__field_input {
+  width: 100%;
+}
+
+.search__field_input::placeholder {
+  color: $grey;
+}

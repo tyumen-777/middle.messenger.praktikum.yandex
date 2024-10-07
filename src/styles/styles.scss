@@ -1,8 +1,8 @@
-@import './normalize.scss';
-@import './variables.scss';
+@import './normalize';
+@import './variables';
 @import 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap';
-@import '../components/index.scss';
-@import '../pages/index.scss';
+@import '../components/index';
+@import '../pages/index';
 
 html {
   min-height: 100vh;

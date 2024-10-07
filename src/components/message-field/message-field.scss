@@ -1,0 +1,18 @@
+.message__field {
+  background-color: $medium-gray;
+  border-radius: 30px;
+  min-height: 32px;
+  padding-left: 20px;
+  flex-grow: 1;
+
+  &::placeholder {
+    color: $grey;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Inter, sans-serif;
+  }
+}
+
+.message__field_error {
+  border: 1px solid $red;
+}

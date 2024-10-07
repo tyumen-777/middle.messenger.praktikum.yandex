@@ -1,0 +1,9 @@
+<div class="field__block">
+  <label for="{{ name }}" class="field__label">{{ label }}</label>
+  {{{Field}}}
+  {{#if error}}
+    <span class="field__block_error">{{ error }}</span>
+  {{else}}
+    <span>{{ help }}</span>
+  {{/if}}
+</div>

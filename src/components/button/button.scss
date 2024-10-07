@@ -10,4 +10,10 @@
     background-color: $white;
     color: $blue;
   }
+
+  &__secondary {
+    background-color: transparent;
+    color: $grey;
+    width: fit-content;
+  }
 }

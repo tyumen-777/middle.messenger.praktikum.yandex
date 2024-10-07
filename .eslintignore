@@ -1,0 +1,9 @@
+app.js
+/dist
+/build
+/node_modules
+**/*.min.js
+
+src/assets/**
+vite.config.js
+vite-plugin-handlebars-precompile.ts

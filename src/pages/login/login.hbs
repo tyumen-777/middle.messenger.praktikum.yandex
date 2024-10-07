@@ -3,13 +3,13 @@
   <div>
     <h1 class="login_title">Вход</h1>
     {{#>Form}}
-    {{>Field label="Логин" name="login"}}
-    {{>Field label="Пароль" name="password" type="password"}}
+    {{{LoginField }}}
+    {{{PasswordField }}}
     {{/Form}}
   </div>
   <div>
-    {{>Button label='Авторизоваться'}}
-    {{>Button label='Нет аккаунта?' type='link' page='signup'}}
+    {{{AuthButton }}}
+    {{{SignupButton }}}
   </div>
 </div>
 {{/BaseLayout}}

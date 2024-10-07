@@ -1,10 +1,10 @@
 {{#> BaseLayout}}
 <div class="profile">
   <aside class="profile__side_menu">
-    {{>ButtonIcon page='chats' src=arrowIcon alt="return"}}
+    {{{BackIcon}}}
   </aside>
   <div class="profile__wrapper">
-    {{>Avatar}}
+    {{{UserAvatar}}}
     <h1 class="profile__title">Артемий</h1>
     <div class="profile__info_wrapper">
       <div class="profile__info_row">
@@ -42,7 +42,7 @@
       {{>Divider}}
       <a class="profile__edit_text">Изменить пароль</a>
       {{>Divider}}
-      {{>Button page='login' label='Выйти' type='link'}}
+      {{{ExitButton }}}
     </div>
   </div>
 </div>

@@ -1,15 +1,18 @@
 <div class="profile__info_wrapper">
   {{#>Form}}
-  {{>FieldInline label="Почта" name="email" value="pochta@yandex.ru"}}
+  {{{EmailLine }}}
   {{>Divider}}
-  {{>FieldInline label="Логин" name="login" value="coler95"}}
+  {{{LoginLine }}}
   {{>Divider}}
-  {{>FieldInline label="Имя" name="first_name" value="Artemii"}}
+  {{{FirstNameLine }}}
   {{>Divider}}
-  {{>FieldInline label="Фамилия" name="second_name" value="Pudovkin"}}
+  {{{SecondNameLine }}}
   {{>Divider}}
-  {{>FieldInline label="Имя в чате" name="display_name" value="Artemii"}}
+  {{{NicknameLine }}}
   {{>Divider}}
-  {{>FieldInline label="Телефон" name="phone" value="89222222222"}}
+  {{{PhoneLine }}}
   {{/Form}}
+  <div class="profile__info_submit_button">
+    {{{SubmitButton}}}
+  </div>
 </div>
