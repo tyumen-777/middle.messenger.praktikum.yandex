@@ -1,5 +1,5 @@
 .signup {
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.14);
+  box-shadow: 0 0 6px 0 rgb(0 0 0 / 14%);
   padding: 30px;
   border-radius: 12px;
   width: 340px;
@@ -11,7 +11,6 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 

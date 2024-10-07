@@ -9,7 +9,7 @@
   }
 
   &__input::placeholder {
-    color: #ffffff00;
+    color: #fff0;
   }
 
   &__label {
@@ -28,7 +28,7 @@
 }
 
 .field__label:has(+ .field__input:focus) {
-  transform: translateY(0px);
+  transform: translateY(0);
   transition:
     font-size 0.2s,
     transform 0.2s;
