@@ -2,6 +2,8 @@
   "tabWidth": 2,
   "singleQuote": true,
   "printWidth": 100,
+  "endOfLine": "lf",
+  "insertFinalNewline": true,
   "overrides": [
     {
       "files": "**/*.hbs",

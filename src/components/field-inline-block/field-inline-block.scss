@@ -1,0 +1,23 @@
+.field__inline_block {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.field__inline_block_label {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.field__inline_block_error {
+  color: #ff2f2f;
+  font-size: 8px;
+  margin-top: 7px;
+}
+
+.field__inline_block_input {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+}
