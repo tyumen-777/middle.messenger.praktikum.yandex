@@ -234,7 +234,6 @@ export class Block {
       },
 
       set(target: BlockProps, prop: string, value: any) {
-        // console.log(`${prop}: ${value}`);
         const oldTarget = { ...target };
         target[prop] = value;
         self.eventBus().emit(Block.EVENTS.FLOW_CDU, oldTarget, target);
@@ -256,7 +255,6 @@ export class Block {
     const content = this.getContent();
     if (content) {
       this.parentNode?.appendChild(content);
-      // console.log(content);
     }
   }
 

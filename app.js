@@ -6,10 +6,10 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('/', (_, res) => {
-  res.sendFile(path.join(__dirname, '/dist', 'index.html'));
+app.get('/*', (_, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 app.listen(3000);

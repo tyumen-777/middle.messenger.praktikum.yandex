@@ -125,8 +125,6 @@ class Chats extends Block {
     setTimeout(() => {
       input.focus();
     }, 300);
-
-    console.log(inputValue);
   }
 
   componentDidUpdate(_oldProps: any, _newProps: any): boolean {

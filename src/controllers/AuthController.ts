@@ -17,7 +17,6 @@ export default class AuthController {
         if (err.reason === 'User already in system') {
           localStorage.setItem('isLogged', 'true');
         }
-        console.log(err.reason, 777);
       });
   }
 

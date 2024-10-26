@@ -57,8 +57,6 @@ export default class Login extends Block {
                 console.log(err);
               });
           }
-          console.log(this.state);
-          console.log(isValid);
         },
       }),
       SignupButton: new Button({

@@ -6,7 +6,6 @@ import { IStoreState } from '../../store/Store.ts';
 
 class ChatList extends Block {
   constructor(props: any) {
-    // console.log(props, 'ChatList');
     super({ ...props, ChatsDialogs: props.chats.map((item: any) => new ChatsListMessage(item)) });
   }
 

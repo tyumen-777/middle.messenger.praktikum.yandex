@@ -139,8 +139,6 @@ export default class Signup extends Block {
           if (isValid) {
             this.signUp();
           }
-          console.log(this.state);
-          console.log(isValid);
         },
       }),
       LoginButton: new Button({

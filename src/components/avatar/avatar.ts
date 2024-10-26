@@ -10,7 +10,6 @@ interface AvatarProps {
 
 export default class Avatar extends Block {
   constructor(props: AvatarProps) {
-    console.log(props);
     super({ ...props, events: { click: props.onClick } });
   }
 

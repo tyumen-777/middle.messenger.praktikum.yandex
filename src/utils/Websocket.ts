@@ -75,7 +75,6 @@ class WS {
         }),
       );
     }
-    // scrollToLast();
   }
 
   private getLastMessages() {
