@@ -1,0 +1,14 @@
+.modal__avatar {
+  > input {
+    display: none;
+  }
+
+  &__label {
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 12px;
+    font-weight: 500;
+    color: $blue;
+    font-family: Inter, sans-serif;
+  }
+}

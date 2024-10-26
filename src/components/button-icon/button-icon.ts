@@ -7,10 +7,11 @@ interface ButtonIconProps {
   src: string;
   rotate?: number;
   disabled?: boolean;
+  onClick?: (e: Event) => void;
 }
 export default class ButtonIcon extends Block {
   constructor(props: ButtonIconProps) {
-    super({ ...props });
+    super({ ...props, events: { click: props.onClick } });
   }
 
   protected render(): string {

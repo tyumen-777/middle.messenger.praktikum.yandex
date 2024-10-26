@@ -2,10 +2,21 @@ import { Block } from '../../utils/Block.ts';
 import template from './signup.hbs?raw';
 import { Button, FieldBlock } from '../../components';
 import { validateInput, validateInputs } from '../../utils/validator.ts';
-import { INPUT_NAMES } from '../../constants';
+import { INPUT_NAMES, ROUTES } from '../../constants';
+import AuthController from '../../controllers/AuthController.ts';
+import { IAuthSignUpRequest } from '../../api/types/AuthApi.types.ts';
 
 export default class Signup extends Block {
-  public state = {};
+  public state: IAuthSignUpRequest = {
+    email: '',
+    first_name: '',
+    login: '',
+    password: '',
+    phone: '',
+    second_name: '',
+  };
+
+  authController = new AuthController();
 
   constructor(props: any) {
     super({
@@ -125,6 +136,9 @@ export default class Signup extends Block {
         type: 'submit',
         onClick: () => {
           const { isValid } = validateInputs(Object.keys(this.state) as Array<INPUT_NAMES>);
+          if (isValid) {
+            this.signUp();
+          }
           console.log(this.state);
           console.log(isValid);
         },
@@ -133,8 +147,16 @@ export default class Signup extends Block {
         label: 'Войти',
         variant: 'link',
         page: 'login',
+        onClick: () => window.router.go(ROUTES.LOGIN),
       }),
     });
+  }
+
+  signUp() {
+    this.authController
+      .signUp(this.state)
+      .then(() => window.router.go(ROUTES.LOGIN))
+      .catch((error) => console.log(error));
   }
 
   setState(key: string, value: unknown) {

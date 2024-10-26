@@ -7,7 +7,7 @@
   transition: all 0.4s ease-in-out;
 
   &:hover {
-    background-color: #000;
+    background-color: grey;
     cursor: pointer;
   }
 }
@@ -23,8 +23,12 @@
 }
 
 .avatar__empty {
-  object-fit: contain;
-  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  color: white;
+  background-color: #3369f3;
 }
 
 .avatar__empty-small {

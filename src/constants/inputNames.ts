@@ -9,4 +9,9 @@ export enum INPUT_NAMES {
   MESSAGE = 'message',
   PASSWORD_AGAIN = 'passwordagain',
   DISPLAY_NAME = 'display_name',
+  NEW_PASSWORD = 'newPassword',
+  NEW_PASSWORD_AGAIN = 'newPasswordAgain',
+  OLD_PASSWORD = 'oldPassword',
+  NICKNAME = 'nickname',
+  CHAT_NAME = 'chat_name',
 }

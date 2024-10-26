@@ -1,11 +1,10 @@
 <div class="avatar avatar__size-{{ size }}">
   {{#if link}}
-  <img src="{{ link }}" alt="user avatar" />
+  <img src="https://ya-praktikum.tech/api/v2/resources{{ link }}" alt="user avatar" />
   {{else}}
-  <img
-    src="{{ emptyImage }}"
-    alt="empty user avatar"
-    class="avatar__empty avatar__empty-{{ size }}"
-  />
+    <div class="avatar__empty">
+      {{{title}}}
+    </div>
+
   {{/if}}
 </div>

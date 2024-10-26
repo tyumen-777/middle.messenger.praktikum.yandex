@@ -9,13 +9,17 @@
   width: 310px;
   border-right: 1px solid $border-grey;
   background-color: $light-grey;
-  padding: 21px 10px 0;
+  padding: 21px 0 0;
+  cursor: pointer;
 }
 
 .chats__search_wrapper {
   display: flex;
   flex-direction: column;
   padding-bottom: 14px;
+  gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   & > button {
     margin-left: auto;
@@ -27,6 +31,15 @@
   padding: 10px 20px 11px;
   display: flex;
   flex-direction: column;
+
+  &__empty {
+    height: 100%;
+    width: calc(100% - 310px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+  }
 }
 
 .chat__header {
@@ -37,6 +50,8 @@
   &_info {
     display: flex;
     padding-bottom: 10px;
+    align-items: center;
+    gap: 10px;
   }
 }
 
@@ -50,6 +65,10 @@
   height: 71px;
   padding: 12px;
   cursor: pointer;
+
+  &-active {
+    background-color: #e4edfd;
+  }
 }
 
 .chat__info {
@@ -95,6 +114,7 @@
   flex-grow: 1;
   flex-direction: column;
   padding-top: 48px;
+  gap: 20px;
 }
 
 .chats__message_wrapper {

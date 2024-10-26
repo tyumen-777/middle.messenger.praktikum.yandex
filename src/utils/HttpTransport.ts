@@ -12,7 +12,7 @@ type Options = {
   data?: any;
 };
 
-type HTTPMethod = (url: string, options?: Options) => Promise<unknown>;
+type HTTPMethod = <R = unknown>(url: string, options?: Options) => Promise<R>;
 
 function queryStringify(data: Record<string, string>) {
   if (typeof data !== 'object') {
@@ -26,23 +26,29 @@ function queryStringify(data: Record<string, string>) {
 }
 
 export default class HTTPTransport {
+  baseURL: string = 'https://ya-praktikum.tech/api/v2';
+
   get: HTTPMethod = (url, options) => {
-    return this.request(url, { ...options, method: METHODS.GET }, options?.timeout);
+    return this.request(this.baseURL + url, { ...options, method: METHODS.GET }, options?.timeout);
   };
 
   post: HTTPMethod = (url, options) => {
-    return this.request(url, { ...options, method: METHODS.POST }, options?.timeout);
+    return this.request(this.baseURL + url, { ...options, method: METHODS.POST }, options?.timeout);
   };
 
   put: HTTPMethod = (url, options) => {
-    return this.request(url, { ...options, method: METHODS.PUT }, options?.timeout);
+    return this.request(this.baseURL + url, { ...options, method: METHODS.PUT }, options?.timeout);
   };
 
   delete: HTTPMethod = (url, options) => {
-    return this.request(url, { ...options, method: METHODS.DELETE }, options?.timeout);
+    return this.request(
+      this.baseURL + url,
+      { ...options, method: METHODS.DELETE },
+      options?.timeout,
+    );
   };
 
-  request = (url: string, options: Options = {}, timeout = 5000) => {
+  request(url: string, options: Options = {}, timeout = 5000): Promise<any> {
     const { headers = {}, method, data } = options;
 
     return new Promise(function (resolve, reject) {
@@ -60,21 +66,32 @@ export default class HTTPTransport {
         xhr.setRequestHeader(key, headers[key]);
       });
 
-      xhr.onload = function () {
-        resolve(xhr);
+      xhr.onload = () => {
+        if (xhr.status < 400) {
+          resolve(xhr.response);
+        } else {
+          reject(xhr.response);
+        }
       };
 
-      xhr.onabort = reject;
-      xhr.onerror = reject;
+      xhr.withCredentials = true;
+      xhr.responseType = 'json';
+
+      xhr.onabort = () => reject(new Error('Request was aborted!'));
+      xhr.onerror = () => reject(new Error(`There is an error during request ${xhr.statusText}`));
 
       xhr.timeout = timeout;
-      xhr.ontimeout = reject;
+      xhr.ontimeout = () => reject(new Error('Timeout while requesting!'));
 
       if (isGet || !data) {
         xhr.send();
       } else {
-        xhr.send(data);
+        const preparedData = data instanceof FormData ? data : JSON.stringify(data);
+        if (!(data instanceof FormData)) {
+          xhr.setRequestHeader('Content-type', 'application/json');
+        }
+        xhr.send(preparedData);
       }
     });
-  };
+  }
 }

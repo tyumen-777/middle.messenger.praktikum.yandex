@@ -2,24 +2,16 @@
   <aside class="chats__wrapper">
     <div class="chats__search_wrapper">
       {{{ProfileButton}}}
+      {{{CreateChat}}}
       {{{SearchField }}}
     </div>
     {{>Divider}}
     <ul class="chats__list">
-      <li class="chat_wrapper">
-        {{{UserAvatar}}}
-        <div class="chat__info">
-          <p class="chat__name">Sam Fishman</p>
-          <span class="chat__date">Fri</span>
-          <p class="chat__message">message</p>
-          <div class="chat__counter">
-            <span>1</span>
-          </div>
-        </div>
-      </li>
+      {{{ChatsList}}}
       {{>Divider}}
     </ul>
   </aside>
+  {{#if selectedChat}}
   <div class="chat">
     <div class="chat__header">
       <div class="chat__header_info">
@@ -40,4 +32,13 @@
       {{{SubmitIcon}}}
     </div>
   </div>
+  {{else}}
+    <div class="chat__empty">
+      Выберите чат, чтобы отправить сообщение
+    </div>
+  {{/if}}
+  {{{ChatSettingsDropdown}}}
+  {{{ModalAddUser}}}
+  {{{ModalDeleteUser}}}
+  {{{ModalCreateChat}}}
 </div>
