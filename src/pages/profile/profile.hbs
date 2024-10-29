@@ -5,42 +5,42 @@
   </aside>
   <div class="profile__wrapper">
     {{{UserAvatar}}}
-    <h1 class="profile__title">Артемий</h1>
+    <h1 class="profile__title">{{{first_name}}}</h1>
     <div class="profile__info_wrapper">
       <div class="profile__info_row">
         <h2 class="profile__info_title">Почта</h2>
-        <h2 class="profile__info_text">pochta&#64;yandex.ru</h2>
+        <h2 class="profile__info_text">{{{email}}}</h2>
       </div>
       {{>Divider}}
       <div class="profile__info_row">
         <h2 class="profile__info_title">Логин</h2>
-        <h2 class="profile__info_text">coler95</h2>
+        <h2 class="profile__info_text">{{{login}}}</h2>
       </div>
       {{>Divider}}
       <div class="profile__info_row">
         <h2 class="profile__info_title">Имя</h2>
-        <h2 class="profile__info_text">Artemii</h2>
+        <h2 class="profile__info_text">{{{first_name}}}</h2>
       </div>
       {{>Divider}}
       <div class="profile__info_row">
         <h2 class="profile__info_title">Фамилия</h2>
-        <h2 class="profile__info_text">Pudovkin</h2>
+        <h2 class="profile__info_text">{{{second_name}}}</h2>
       </div>
       {{>Divider}}
       <div class="profile__info_row">
         <h2 class="profile__info_title">Имя в чате</h2>
-        <h2 class="profile__info_text">Artemii</h2>
+        <h2 class="profile__info_text">{{{display_name}}}</h2>
       </div>
       {{>Divider}}
       <div class="profile__info_row">
         <h2 class="profile__info_title">Телефон</h2>
-        <h2 class="profile__info_text">89222222222</h2>
+        <h2 class="profile__info_text">{{{phone}}}</h2>
       </div>
     </div>
     <div class="profile__edit_wrapper">
-      <a class="profile__edit_text" page="profile-edit">Изменить данные</a>
+      {{{EditProfileButton}}}
       {{>Divider}}
-      <a class="profile__edit_text">Изменить пароль</a>
+      {{{EditPasswordButton}}}
       {{>Divider}}
       {{{ExitButton }}}
     </div>

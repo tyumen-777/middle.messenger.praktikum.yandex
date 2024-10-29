@@ -7,6 +7,7 @@ interface FieldInlineBlockProps {
   label: string;
   value: string;
   error?: string;
+  placeholder?: string;
   events?: {
     onChange?: (event: Event) => void;
     onBlur?: (event: Event) => void;

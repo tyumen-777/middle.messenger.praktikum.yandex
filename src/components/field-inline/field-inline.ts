@@ -5,6 +5,7 @@ interface FieldInlineProps {
   name: string;
   label: string;
   value: string;
+  placeholder?: string;
   events?: {
     onChange?: (event: Event) => void;
     onBlur?: (event: Event) => void;

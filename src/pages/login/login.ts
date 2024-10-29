@@ -1,11 +1,15 @@
 import { Block } from '../../utils/Block.ts';
 import template from './login.hbs?raw';
 import { Button, FieldBlock } from '../../components';
-import { INPUT_NAMES } from '../../constants';
+import { INPUT_NAMES, ROUTES } from '../../constants';
 import { validateInput, validateInputs } from '../../utils/validator.ts';
+import AuthController from '../../controllers/AuthController.ts';
+import { IAuthSignInRequest } from '../../api/types/AuthApi.types.ts';
 
 export default class Login extends Block {
-  public state = {};
+  public state: IAuthSignInRequest = { login: '', password: '' };
+
+  authController = new AuthController();
 
   constructor(props: any) {
     super({
@@ -45,13 +49,26 @@ export default class Login extends Block {
         label: 'Авторизоваться',
         onClick: () => {
           const { isValid } = validateInputs(Object.keys(this.state) as Array<INPUT_NAMES>);
-          console.log(this.state);
-          console.log(isValid);
+          if (isValid) {
+            this.authController
+              .signIn(this.state)
+              .then(() => window.router.go(ROUTES.CHATS))
+              .catch((err) => {
+                console.log(err);
+              });
+          }
         },
       }),
-      SignupButton: new Button({ label: 'Нет аккаунта?', variant: 'link', page: 'signup' }),
+      SignupButton: new Button({
+        label: 'Нет аккаунта?',
+        variant: 'link',
+        page: 'signup',
+        onClick: () => window.router.go(ROUTES.SIGN_UP),
+      }),
     });
   }
+
+  protected signIn() {}
 
   protected render(): string {
     return template;

@@ -1,0 +1,13 @@
+  <li class="chat_wrapper {{#if active}}chat_wrapper-active{{/if}}">
+  {{{UserAvatar}}}
+  <div class="chat__info">
+    <p class="chat__name">{{{title}}}</p>
+    <span class="chat__date">Fri</span>
+    <p class="chat__message">{{{message}}}</p>
+    {{#if unread_count}}
+    <div class="chat__counter">
+      <span>{{{unread_count}}}</span>
+    </div>
+    {{/if}}
+  </div>
+</li>

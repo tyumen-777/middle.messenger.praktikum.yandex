@@ -18,6 +18,7 @@ export const VALIDATE_REGEX = {
   PHONE: '^\\+?\\d{10,15}$',
   MESSAGE: '^.+$',
   PASSWORD: '^(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,40}$',
+  NUMBER: '^[0-9]*$',
 };
 const getRegexByElementId = (elementId: INPUT_NAMES) => {
   switch (elementId) {
@@ -29,10 +30,14 @@ const getRegexByElementId = (elementId: INPUT_NAMES) => {
       return VALIDATE_REGEX.NAME;
     case INPUT_NAMES.PASSWORD:
     case INPUT_NAMES.PASSWORD_AGAIN:
+    case INPUT_NAMES.NEW_PASSWORD:
+    case INPUT_NAMES.NEW_PASSWORD_AGAIN:
+    case INPUT_NAMES.OLD_PASSWORD:
       return VALIDATE_REGEX.PASSWORD;
     case INPUT_NAMES.PHONE:
       return VALIDATE_REGEX.PHONE;
     case INPUT_NAMES.MESSAGE:
+    case INPUT_NAMES.NICKNAME:
       return VALIDATE_REGEX.MESSAGE;
     case INPUT_NAMES.LOGIN:
       return VALIDATE_REGEX.LOGIN;
@@ -53,7 +58,7 @@ export const validateInput = ({ elementId }: ValidateInputProps): ValidationResu
 export const validateInputs = (inputNames: INPUT_NAMES[]) => {
   // console.log(inputNames);
   const validationResult = inputNames.map((item) => validateInput({ elementId: item }));
-
+  console.log(validationResult);
   return {
     isValid: validationResult.every((item) => item.valid),
   };
