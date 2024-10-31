@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "start": "npm run build && nodemon app.js",
     "lint-staged": "lint-staged",
-    "test": "mocha"
+    "test": "mocha",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.ts|*.tsx": ["npm run test","prettier --write"]
