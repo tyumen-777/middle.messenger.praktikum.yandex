@@ -13,7 +13,10 @@
     "postinstall": "npx husky install && cp .husky/pre-commit .git/hooks/pre-commit"
   },
   "lint-staged": {
-    "*.ts|*.tsx": ["npm run test","prettier --write"]
+    "*.ts|*.tsx": [
+      "npm run test",
+      "prettier --write"
+    ]
   },
   "husky": {
     "hooks": {
@@ -36,7 +39,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-react": "^7.37.0",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "husky": "^9.1.6",
+    "husky": "^8.0.3",
     "jsdom": "^25.0.1",
     "lint-staged": "^15.2.7",
     "mocha": "^10.7.3",
