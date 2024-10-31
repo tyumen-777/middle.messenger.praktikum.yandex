@@ -10,7 +10,7 @@
     "start": "npm run build && nodemon app.js",
     "lint-staged": "lint-staged",
     "test": "mocha",
-    "prepare": "husky install"
+    "postinstall": "npx husky install && cp .husky/pre-commit .git/hooks/pre-commit"
   },
   "lint-staged": {
     "*.ts|*.tsx": ["npm run test","prettier --write"]
