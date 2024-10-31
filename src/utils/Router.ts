@@ -9,7 +9,7 @@ export default class Router {
 
   private _rootQuery: string = '';
 
-  private history: History = window.history;
+  public history: History = window.history;
 
   private _currentRoute: Route | null = null;
 
@@ -51,8 +51,8 @@ export default class Router {
     const isLogged = localStorage.getItem('isLogged');
     const isPrivateRoute = AuthRoutes.some((item) => item === (pathname as ROUTES));
 
-    if (isPrivateRoute && !isLogged) {
-      window.router.go(ROUTES.LOGIN);
+    if (isPrivateRoute && isLogged) {
+      this.go(ROUTES.LOGIN);
       return;
     }
 
