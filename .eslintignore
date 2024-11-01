@@ -7,3 +7,5 @@ app.js
 src/assets/**
 vite.config.js
 vite-plugin-handlebars-precompile.ts
+mochaSetup.js
+loader-scss.js
